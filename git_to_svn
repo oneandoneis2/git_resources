@@ -1,0 +1,5 @@
+git ls = svn log -v
+git ss = svn log -v -r <n>
+git blame = svn annotate <file> | less
+git show <n> = svn diff -r<n-1>:<n>
+git co file = svn revert file
