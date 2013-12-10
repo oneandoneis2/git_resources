@@ -1,0 +1,36 @@
+[user]
+    name = Your Name Goes Here
+    email = your@email.here
+[color]
+# Color all the things!
+    diff = auto
+    status = auto
+    branch = auto
+[alias]
+# Shorten all the things!
+    br = branch
+    ci = commit
+    co = checkout
+    cp = cherry-pick
+    dc = diff --cached # Because you often want to diff what you've staged
+    la = log --pretty=abbrev # Use a custom log output, defined below
+    ls = log --stat
+    lp = log -p
+    ss = show --stat
+    st = status
+    su = submodule update
+    map = log --graph --abbrev-commit --pretty=oneline --all --decorate
+    # ^ Graph of full history, insanely useful to work out what's going on
+    sur = submodule update --recursive
+    unstage = reset HEAD # I don't know why this doesn't exist as a standard command
+[push]
+    default = tracking # Why would you want to push a branch but not track it..?
+[merge]
+    # Best format for resolving conflicts
+	conflictstyle = diff3
+[pretty]
+    # Custom output format
+    abbrev = "tformat:%Cred%h%Creset -%C(yellow)[ %d] %Creset%s %Cgreen(%an %cr)%Creset"
+[diff]
+# Remove the a/ b/ prefix nonsense from pathnames in the diff so you can C&P easily
+	noprefix = true
