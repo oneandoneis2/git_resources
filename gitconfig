@@ -19,6 +19,7 @@
     ss = show --stat
     st = status
     su = submodule update
+    civ = commit -v # Show the diff in the editor when you write a commit message
     map = log --graph --abbrev-commit --pretty=oneline --all --decorate
     # ^ Graph of full history, insanely useful to work out what's going on
     sur = submodule update --recursive
